@@ -1,0 +1,234 @@
+<mxfile host="drawio.msk.hisilicon.com" modified="2026-05-11T10:39:56.530Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0" etag="_p2MqTrdbpvvpkDcAqAJ" version="21.7.5" type="device">
+  <diagram name="Page-1" id="rbhP8IJvlENz1VzIBUBr">
+    <mxGraphModel dx="1434" dy="3224" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-53" value="" style="html=1;dropTarget=0;whiteSpace=wrap;fontFamily=Lucida Console;fontSize=16;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="130" y="-1120" width="500" height="790" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-54" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-53">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-1" value="+TraceSim" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Lucida Console;" vertex="1" parent="1">
+          <mxGeometry x="160" y="-1050" width="440" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-7" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&amp;lt;&amp;lt;type alias&amp;gt;&amp;gt;&lt;br&gt;+ InstrExecCallback = std::function&amp;lt;void(const trace::InstrExecRecord&amp;amp;)&amp;gt;&lt;/span&gt;&lt;br style=&quot;border-color: rgb(218, 220, 224); color: rgb(0, 0, 0); font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&amp;lt;&amp;lt;type alias&amp;gt;&amp;gt;&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;+ MemoryCallback = std::function&amp;lt;void(const trace::MemoryRecord&amp;amp;)&amp;gt;&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;&amp;lt;&amp;lt;type alias&amp;gt;&amp;gt;&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;+ GprCallback = std::function&amp;lt;void(const trace::GprRecord&amp;amp;)&amp;gt;&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;&amp;lt;&amp;lt;type alias&amp;gt;&amp;gt;&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;+ ContextSwitchCallback = std::function&amp;lt;void()&amp;gt;&lt;br&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=10;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-1">
+          <mxGeometry y="26" width="440" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-5" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-1">
+          <mxGeometry y="130" width="440" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-4" value="+ TraceSim(const trace::Trace &amp;amp;)&lt;br&gt;+ ~TraceSim() {virtual, default}&lt;br&gt;&lt;br&gt;+ add_callback_pre_iexec(InstrExecCallback)&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;+ add_callback_pre_memory(MemoryCallback)&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;+ add_callback_post_gpr(GprCallback)&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;+ add_callback_post_iexec(InstrExecCallback)&lt;br&gt;+ add_callback_context_switch(ContextSwitchCallback)&lt;br&gt;&lt;br&gt;+ sim(): const sim::Simulator &amp;amp; {const}&lt;br&gt;&lt;br&gt;+ process(const trace::Record &amp;amp;)&lt;br&gt;&lt;br&gt;# process_iexec(const trace::InstrExecRecord &amp;amp;) {virtual}&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;# process_mem(const trace::MemoryRecord &amp;amp;) {virtual}&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;# process_gpr(const trace::GprRecord &amp;amp;) {virtual}&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;# process_context_switch(const trace::ContextSwitch &amp;amp;) {virtual}&lt;br&gt;&lt;br&gt;&amp;lt;&amp;lt;m_sim pre load callback&amp;gt;&amp;gt;&lt;br&gt;- sim_callback_pre_load(uint64_t addr, std::span&amp;lt;uint8_t&amp;gt; data)&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;&amp;lt;&amp;lt;m_sim pre load callback&amp;gt;&amp;gt;&lt;br&gt;- sim_callback_pre_store(uint64_t addr, std::span&amp;lt;uint8_t&amp;gt; data)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=10;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-1">
+          <mxGeometry y="138" width="440" height="272" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-1">
+          <mxGeometry y="410" width="440" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-6" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;protected fields&lt;/i&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=10;spacingLeft=4;verticalAlign=middle;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-1">
+          <mxGeometry y="418" width="440" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=15;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-12" target="OtsRXQgtjmzPSBaJeRan-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-12" value="+PatchedTraceSim" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Lucida Console;" vertex="1" parent="1">
+          <mxGeometry x="160" y="-550" width="440" height="188" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-15" value="+&amp;nbsp;PatchedTraceSim(const trace::Trace &amp;amp;,&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const Relocations &amp;amp;,&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const Patches &amp;amp;)&lt;br&gt;&lt;br&gt;+ ~PatchedTraceSim() {override, default}&lt;br&gt;&lt;br&gt;- process_iexec(const trace::InstrExecRecord &amp;amp;) {override}&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;- process_mem(const trace::MemoryRecord &amp;amp;) {override}&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;- process_gpr(const trace::GprRecord &amp;amp;) {override}&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;- process_context_switch(const trace::ContextSwitch &amp;amp;) {override}" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=10;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-12">
+          <mxGeometry y="26" width="440" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-12">
+          <mxGeometry y="160" width="440" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-17" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;private fields&lt;/i&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Lucida Console;spacingLeft=4;verticalAlign=middle;fontSize=10;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-12">
+          <mxGeometry y="168" width="440" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-43" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="255" y="-1300" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-44" value="" style="html=1;dropTarget=0;whiteSpace=wrap;fontFamily=Lucida Console;fontSize=16;verticalAlign=top;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-43">
+          <mxGeometry width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-45" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-44">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-46" value="&lt;b style=&quot;border-color: rgb(218, 220, 224); color: rgb(0, 0, 0); font-family: &amp;quot;Lucida Console&amp;quot;; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Trace library&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;&amp;lt;&amp;lt;namespace&amp;gt;&amp;gt; trace&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-43">
+          <mxGeometry x="15" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-47" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="760" y="-1300" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-48" value="" style="html=1;dropTarget=0;whiteSpace=wrap;fontFamily=Lucida Console;fontSize=16;verticalAlign=top;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-47">
+          <mxGeometry width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-49" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-48">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-50" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;border-color: rgb(218, 220, 224); font-family: &amp;quot;Lucida Console&amp;quot;;&quot;&gt;Dfg Module&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;&lt;/b&gt;&lt;b style=&quot;border-color: rgb(218, 220, 224); font-family: &amp;quot;Lucida Console&amp;quot;;&quot;&gt;&amp;lt;&amp;lt;namespace&amp;gt;&amp;gt; dfg&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-47">
+          <mxGeometry x="15" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-55" value="&lt;b style=&quot;border-color: rgb(218, 220, 224); color: rgb(0, 0, 0); font-family: &amp;quot;Lucida Console&amp;quot;; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Trace simulation module&lt;br&gt;&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="270" y="-1110" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-60" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="680" y="-1120" width="470" height="790" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-57" value="" style="html=1;dropTarget=0;whiteSpace=wrap;fontFamily=Lucida Console;fontSize=16;verticalAlign=top;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-60">
+          <mxGeometry width="470" height="790" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-58" value="" style="shape=module;jettyWidth=8;jettyHeight=4;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-57">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-59" value="&lt;b style=&quot;border-color: rgb(218, 220, 224); color: rgb(0, 0, 0); font-family: &amp;quot;Lucida Console&amp;quot;; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;Other components&lt;br&gt;&lt;/b&gt;" style="text;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-60">
+          <mxGeometry x="125" y="10" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-19" value="+TraceDfgCollector" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-60">
+          <mxGeometry x="30" y="70" width="410" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-20" value="+&amp;nbsp;TraceDfgCollector()&lt;br&gt;&lt;br&gt;+ collect_dfg(const trace::Trace&amp;amp;): dfg::DfgData&lt;br&gt;&lt;br&gt;- callback_pre_iexec(const trace::InstrExecRecord&amp;amp;)&lt;br&gt;- callback_pre_memory(const trace::MemoryRecord&amp;amp;)&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;- callback_post_iexec(const trace::InstrExecRecord&amp;amp;)&lt;br&gt;- callback_context_switch()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=10;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-19">
+          <mxGeometry y="26" width="410" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-21" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-19">
+          <mxGeometry y="130" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-22" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;- m_sim: TraceSim&lt;br style=&quot;font-size: 10px;&quot;&gt;- m_dfg_collector: dfg::DfgCollector&lt;br style=&quot;font-size: 10px;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;private fields&lt;/i&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=10;verticalAlign=middle;horizontal=1;labelPosition=center;verticalLabelPosition=middle;align=left;spacingLeft=4;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-19">
+          <mxGeometry y="138" width="410" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-23" value="+SecondaryPatchGen" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-60">
+          <mxGeometry x="30" y="290" width="410" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-24" value="+&amp;nbsp;SecondaryPatchGen(const trace::Trace &amp;amp;,&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const dfg::DfgData &amp;amp;,&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; const Relocations &amp;amp;,&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; primary_patches: const Patches&amp;amp;)&lt;br&gt;&lt;br&gt;+ generate_secondary_patches(): Patches&lt;br&gt;&lt;br&gt;- callback_pre_iexec(const trace::InstrExecRecord&amp;amp;)&lt;br style=&quot;border-color: rgb(218, 220, 224);&quot;&gt;- callback_post_iexec(const trace::InstrExecRecord&amp;amp;)&lt;br&gt;&lt;br&gt;- patch_addressing(dfg::Vertex)&lt;br&gt;- patch_gpr_cond_branch(dfg::Vertex)&lt;br&gt;&lt;br&gt;- save_pre_iexec_state()&lt;br&gt;&lt;br&gt;- patch_cond_flags_instr(dfg::Vertex)&lt;br&gt;&lt;br&gt;- &lt;i&gt;private methods&lt;/i&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=10;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-23">
+          <mxGeometry y="26" width="410" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-25" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-23">
+          <mxGeometry y="250" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-26" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;- m_sim: PatchedTraceSim&lt;br style=&quot;font-size: 10px;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;&lt;i style=&quot;font-size: 10px;&quot;&gt;private fields&lt;/i&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=10;verticalAlign=middle;spacingLeft=4;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-23">
+          <mxGeometry y="258" width="410" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-27" value="+PatchedTraceWriter" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-60">
+          <mxGeometry x="30" y="620" width="410" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-28" value="+&amp;nbsp;PatchedTraceWriter(const trace::Trace &amp;amp;,&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;const Relocations &amp;amp;,&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;const Patches &amp;amp;)&lt;br&gt;&lt;br&gt;+ write(const trace::WriteConfig&amp;amp;, std::filesystem::path)&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=10;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-27">
+          <mxGeometry y="26" width="410" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-29" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Lucida Console;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-27">
+          <mxGeometry y="100" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-30" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;- m_sim: PatchedTraceSim&lt;br&gt;- &lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; font-size: 10px; display: inline !important;&quot;&gt;&lt;i&gt;private fields&lt;/i&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=10;spacingLeft=4;verticalAlign=middle;" vertex="1" parent="OtsRXQgtjmzPSBaJeRan-27">
+          <mxGeometry y="108" width="410" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.228;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-44" target="OtsRXQgtjmzPSBaJeRan-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="-1225" />
+              <mxPoint x="660" y="-850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="-460" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="-1225" />
+              <mxPoint x="660" y="-460" />
+              <mxPoint x="600" y="-460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-44" target="OtsRXQgtjmzPSBaJeRan-24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="-1225" />
+              <mxPoint x="660" y="-692" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-44" target="OtsRXQgtjmzPSBaJeRan-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="-1225" />
+              <mxPoint x="660" y="-460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-44" target="OtsRXQgtjmzPSBaJeRan-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="-1225" />
+              <mxPoint x="660" y="-960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-48" target="OtsRXQgtjmzPSBaJeRan-24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="-1225" />
+              <mxPoint x="1180" y="-692" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1120" y="-420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1180" y="-1225" />
+              <mxPoint x="1180" y="-420" />
+              <mxPoint x="1120" y="-420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;endSize=10;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1120" y="-960" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1180" y="-1225" />
+              <mxPoint x="1180" y="-960" />
+              <mxPoint x="1120" y="-960" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-71" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.077;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=open;endFill=0;startArrow=diamondThin;startFill=1;endSize=10;startSize=15;fillColor=#d5e8d4;strokeColor=#006600;strokeWidth=1.5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="-909.9764444444447" as="sourcePoint" />
+            <mxPoint x="600" y="-909.9960000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-72" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="-908.94" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endSize=10;startSize=15;endArrow=open;endFill=0;startArrow=diamondThin;startFill=1;strokeColor=#006600;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="-500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="650" y="-620" />
+              <mxPoint x="650" y="-500" />
+              <mxPoint x="600" y="-500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endSize=10;startSize=15;endArrow=open;endFill=0;startArrow=diamondThin;startFill=1;strokeColor=#006600;strokeWidth=1.5;" edge="1" parent="1" source="OtsRXQgtjmzPSBaJeRan-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="-500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="650" y="-410" />
+              <mxPoint x="650" y="-500" />
+              <mxPoint x="600" y="-500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OtsRXQgtjmzPSBaJeRan-75" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="-500" width="30" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

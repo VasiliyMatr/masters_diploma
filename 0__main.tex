@@ -1,0 +1,31 @@
+\documentclass[a4paper, openany, 12pt]{extarticle}
+
+%% подключаем преамбулу: в ней содержится подключение всех необходимых пакетов
+\input{include/preambule.tex}
+\input{include/math.tex}
+
+\input{2__denotes.tex}
+
+\begin{document}
+    %% титульник
+    \input{include/title.tex}
+
+    %% аннотация
+    \input{1__abstract.tex}
+
+    %% содержание
+    \tableofcontents{}
+    \newpage
+    \printglossary[type=\acronymtype]
+    \printglossary[type=symbols, title={Математические обозначения}]
+    \printglossary[type=main]
+    \newpage
+
+    \input{3__intro.tex} %% Введение
+    \input{4__literature_review.tex} %% Постановка задачи
+    \input{5__solution.tex} %% Обзор существующих решений
+    \input{6__conclusion.tex} %% Заключение
+
+    \nocite{*}
+    \printbibliography
+\end{document}

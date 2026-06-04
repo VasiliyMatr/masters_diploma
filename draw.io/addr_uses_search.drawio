@@ -1,0 +1,25 @@
+<mxfile host="drawio.msk.hisilicon.com" modified="2026-05-04T13:28:56.122Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0" etag="s50g7bIoMZs20QNJUsCm" version="21.7.5" type="device">
+  <diagram name="Page-1" id="zfkG_lFkusv5YXFqJKq8">
+    <mxGraphModel dx="501" dy="1432" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Mtgli9SA09XfoAd9ALke-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Mtgli9SA09XfoAd9ALke-1" target="Mtgli9SA09XfoAd9ALke-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Mtgli9SA09XfoAd9ALke-1" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;&lt;i&gt;e = (v, w)&lt;/i&gt;&lt;/b&gt; - текущее ребро в начале очереди прямого обхода&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="-30" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Mtgli9SA09XfoAd9ALke-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Mtgli9SA09XfoAd9ALke-2" target="Mtgli9SA09XfoAd9ALke-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Mtgli9SA09XfoAd9ALke-2" value="Начало" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="340" y="-100" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Mtgli9SA09XfoAd9ALke-4" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;Построить обратный путь для &lt;b&gt;&lt;i&gt;e&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;size=0.0625;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
