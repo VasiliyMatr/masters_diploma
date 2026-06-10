@@ -4,7 +4,7 @@
 
 \subsection{Позиционно-независимый код}
 
-Позиционно независимый код (Position Independent Code, \gls{pic}) \cite{bendersky_pic_in_shared_libs,linkers_and_loaders} - это код, который может быть размещен по любому адресу. PIC библиотека или приложение (\glsdisp{module}{модуль}) напрямую не использует фиксированные адреса и для доступа к коду и данным использует относительные смещения или таблицу глобальных смещений (Global Offset Table, \gls{got}) и таблицу связывания процедур (Procedure Linkage Table, \gls{plt}) \cite{bendersky_pic_in_shared_libs,elf_specification}. PIC модули могут быть загружены по любым адресам, что позволяет использовать их с технологией рандомизации адресного пространства (Address Space Layout Randomization, \gls{aslr}) и существенно упрощает динамическое связывание библиотек.
+Позиционно-независимый код (Position-Independent Code, \gls{pic}) \cite{bendersky_pic_in_shared_libs,linkers_and_loaders} - это код, который может быть размещен по любому адресу. PIC библиотека или приложение (\glsdisp{module}{модуль}) напрямую не использует фиксированные адреса и для доступа к коду и данным использует относительные смещения или глобальную таблицу смещений (Global Offset Table, \gls{got}) и таблицу связывания процедур (Procedure Linkage Table, \gls{plt}) \cite{bendersky_pic_in_shared_libs,elf_specification}. PIC модули могут быть загружены по любым адресам, что позволяет использовать их с технологией рандомизации адресного пространства (Address Space Layout Randomization, \gls{aslr}) и существенно упрощает динамическое связывание библиотек.
 
 \begin{figure}[h!]
     \centering
