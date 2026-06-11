@@ -25,7 +25,7 @@ TRACE_COLUMN = "trace"
 PROCESSING_COLUMN = "processing"
 VERIFICATION_COLUMN = "verification"
 DEFAULT_MISSING_FRACTION = 0.035
-FONT_SCALE = 1.5
+FONT_SCALE = 2
 BASE_FONT_SIZE = 10.0 * FONT_SCALE
 METRIC_LABEL_SIZE = 12.0 * FONT_SCALE
 LEGEND_ANCHOR_Y = -0.16
@@ -451,6 +451,8 @@ def draw_metric(
         ]
         for line_index, line_value in enumerate(target_lines):
             color = TARGET_LINE_COLORS[line_index % len(TARGET_LINE_COLORS)]
+            mantissa, exponent = f"{line_value:.2e}".split("e")
+            mantissa = mantissa.rstrip("0").rstrip(".")
             ax.axhline(
                 line_value,
                 color=color,
@@ -465,7 +467,7 @@ def draw_metric(
                     color=color,
                     linestyle="--",
                     linewidth=1.2,
-                    label=f"{display_metric} = {line_value:g}",
+                    label=f"{display_metric} = {mantissa}e{int(exponent):d}",
                 )
             )
         ax.legend(
